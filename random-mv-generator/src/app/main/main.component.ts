@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MvService } from '../services/mv.service';
 
 @Component({
   selector: 'app-main',
@@ -7,15 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
   isClicked = false;
-  constructor() { }
+  randNumber = 0;
+  mvObjs;
+  constructor(private mvService: MvService) { }
 
   ngOnInit(): void {
+    this.mvObjs = this.mvService.getAll();
   }
 
-  getRandomMV(event){
-    this.isClicked = true;
-    console.log("being clicked");
-    console.log(event.target);
+  getRandomMV(){
+    this.isClicked = false;
+    let randomNumber = Math.floor(Math.random()* this.mvObjs.length);
+    this.randNumber = randomNumber;
+    let randMVObj = this.mvObjs[randomNumber];
+    
+    console.log(randMVObj);
+    
   }
 
 }
