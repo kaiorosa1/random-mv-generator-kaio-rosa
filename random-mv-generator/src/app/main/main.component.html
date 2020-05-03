@@ -3,8 +3,8 @@
     <h3>Click on the button to a random music video
         recommendation
     </h3>
-    <button>Get MV</button>
+    <button (click)="getRandomMV($event)">Get MV</button>
 </div>
 <div>
 </div>
-<mvpage></mvpage>  
+<mvpage *ngIf="isClicked"></mvpage>  

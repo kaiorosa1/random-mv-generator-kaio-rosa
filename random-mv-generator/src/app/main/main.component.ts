@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
+  isClicked = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getRandomMV(event){
+    this.isClicked = true;
+    console.log("being clicked");
+    console.log(event.target);
   }
 
 }
