@@ -1,4 +1,5 @@
-<h3>{{ mvProp.artist }}</h3>
+<div *ngIf="mvProp">
+    <h3>{{ mvProp.artist }}</h3>
 <p>[Photo]</p>
 <h4>{{ mvProp.titletrack }}</h4>
 <div>
@@ -10,4 +11,5 @@
     {{ mvProp.titletrack + ' Lyrics'}}
     </h4>
     {{ mvProp.lyrics[0]}}
+</div>
 </div>

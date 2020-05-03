@@ -17,12 +17,11 @@ export class MainComponent implements OnInit {
   }
 
   getRandomMV(){
-    this.isClicked = false;
+    this.isClicked = true;
     let randomNumber = Math.floor(Math.random()* this.mvObjs.length);
     this.randNumber = randomNumber;
     let randMVObj = this.mvObjs[randomNumber];
-    
-    console.log(randMVObj);
+    this.mvService.getMvListener().next(randMVObj);
     
   }
 

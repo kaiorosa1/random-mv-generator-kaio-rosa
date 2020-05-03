@@ -10,22 +10,22 @@ import { Observable } from 'rxjs';
 })
 export class MvpageComponent implements OnInit {
   mvProp: MvPage;
-  mvObserver = new Observable<MvPage>();
+  // mvObserver = new Observable<MvPage>();
 
   @Input() rand;
   constructor(private mvService: MvService) { }
 
   ngOnInit(): void {
     // get all mv / lyrics 
-    // let mvObjs = this.mvService.getAll();
     // get random from the pool 
-    this.mvObserver.subscribe((data)=> {
-      console.log(data)
+    // display radom one in the mv page
+    this.mvService.getMvListener()
+    .subscribe((data)=> {
+      // console.log(data);
+      this.mvProp = data;
       // console.log(this.rand);
-      // let random = mvObjs[this.rand];
-      // // display radom one in the mv page
-      // this.mvProp = random;
-    })
+     
+    });
     
 
   }

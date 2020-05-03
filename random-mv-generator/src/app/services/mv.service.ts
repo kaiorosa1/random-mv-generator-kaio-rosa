@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import { Subject, BehaviorSubject } from 'rxjs';
+import { MvPage } from '../models/mvpage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MvService {
-  
+  mvSubject = new Subject<any>();
   objMVs = [
     {
       artist: 'Rina Sawayama',
@@ -37,4 +39,9 @@ export class MvService {
   getAll(){
     return this.objMVs;
   }
+
+  getMvListener() {
+    return this.mvSubject;
+  }
+
 }
