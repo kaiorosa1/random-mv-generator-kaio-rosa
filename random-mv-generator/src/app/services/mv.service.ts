@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, BehaviorSubject } from 'rxjs';
-import { MvPage } from '../models/mvpage';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
