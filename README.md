@@ -1,6 +1,6 @@
-# random-meal-generator-kaio-rosa
+# random-mv-generator-kaio-rosa
 
-This is project #1 from the 100 Projects in a 100 Days by Florin Pop. 
+This is project #1 from the 100 Projects in a 100 Days by Florin Pop. (Random Meal Generator)
 
 
 Link for the blog post about the challenge: 
