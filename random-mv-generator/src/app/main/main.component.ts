@@ -8,6 +8,7 @@ import { MvService } from '../services/mv.service';
 })
 export class MainComponent implements OnInit {
   isClicked = false;
+  containerClass = 'container-full'
   mvObjs;
   constructor(private mvService: MvService) { }
 
@@ -17,6 +18,7 @@ export class MainComponent implements OnInit {
 
   getRandomMV(){
     this.isClicked = true;
+    this.containerClass = 'container';
     let randomNumber = Math.floor(Math.random()* this.mvObjs.length);
     let randMVObj = this.mvObjs[randomNumber];
     this.mvService.getMvListener().next(randMVObj);
